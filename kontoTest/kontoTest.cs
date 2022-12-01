@@ -6,7 +6,7 @@ namespace BankTest
     public class BankTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Konto_KannMitGuthabenEröffnetWerden()
         {
             //Arrange
             Konto k;
