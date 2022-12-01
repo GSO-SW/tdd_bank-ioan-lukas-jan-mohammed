@@ -1,11 +1,12 @@
 namespace kontoTest
 {
     [TestClass]
-    public class UnitTest1
+    public class kontoTest
     {
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
