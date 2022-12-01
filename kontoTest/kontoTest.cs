@@ -23,21 +23,35 @@ namespace BankTest
         {
             //Arrange 
             Konto k;
-            int Anfangsguthaben = 100;
-            int Einzahlbetrag = 10;
-            int Auszahlbetrag = 10;
-            int Ziehlguhaben = 120;
+            int anfangsguthaben = 100;
+            int einzahlbetrag = 10;
+            int auszahlbetrag = 10;
+            int zielguhaben = 120;
 
             //Act
-            k = new Konto(Anfangsguthaben);
+            k = new Konto(anfangsguthaben);
             for (int i = 0; i < 3; i++)
             {
-                k.Einzahlen(Einzahlbetrag);
+                k.Einzahlen(einzahlbetrag);
             }
-            k.Auszahlen(Auszahlbetrag);
+            k.Auszahlen(auszahlbetrag);
 
             //Assert
-            Assert.AreEqual(120, Ziehlguhaben);
+            Assert.AreEqual(120, zielguhaben);
+        }
+        [TestMethod]
+        public void Konto_KannGeschlossenWerden()
+        {
+            //Arrange 
+            Konto k;
+            int guthaben = 100;
+
+            //Act
+            k = new Konto(guthaben);
+            k.Auszahlen(guthaben);
+
+            //Assert
+            Assert.AreEqual(0, k.Guthaben);
         }
     }
 }
