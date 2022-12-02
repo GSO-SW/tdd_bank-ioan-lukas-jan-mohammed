@@ -28,12 +28,12 @@ namespace Bank
             if (guthaben >= 0)
             {
                 this.guthaben = guthaben;
+                kontoNr++;
             }
             else
             {
-                throw new ArgumentException("Guthaben muss mehr als 0 sein");
+                throw new ArgumentOutOfRangeException();
             }
-            kontoNr++;
         }
 
         public void Einzahlen(int betrag)
