@@ -5,6 +5,7 @@ namespace Bank
     public class Konto
     {
         private int guthaben;
+        private static int kontoNr;
 
         public int Guthaben
         {
@@ -14,9 +15,25 @@ namespace Bank
             }
         }
 
+        public int KontoNr
+        {
+            get 
+            { 
+                return kontoNr; 
+            }
+        }
+
         public Konto(int guthaben)
         {
-            this.guthaben = guthaben;
+            if (guthaben >= 0)
+            {
+                this.guthaben = guthaben;
+            }
+            else
+            {
+                throw new ArgumentException("Guthaben muss mehr als 0 sein");
+            }
+            kontoNr++;
         }
 
         public void Einzahlen(int betrag)
