@@ -5,8 +5,8 @@ namespace Bank
     public class Konto
     {
         private int guthaben;
-        private static int kontoNr;
-
+        private static int letzteKontoNr;
+        private int kontoNr;
         public int Guthaben
         {
             get
@@ -28,7 +28,8 @@ namespace Bank
             if (guthaben >= 0)
             {
                 this.guthaben = guthaben;
-                kontoNr++;
+                letzteKontoNr++;
+                this.kontoNr = letzteKontoNr;
             }
             else
             {
