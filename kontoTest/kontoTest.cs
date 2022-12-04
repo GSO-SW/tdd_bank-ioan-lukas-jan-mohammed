@@ -68,17 +68,17 @@ namespace BankTest
             Konto k = new Konto(guthaben);
         }
 
-        //[TestMethod]
-        //public void KontoNr_KannAbgefragtWerden()
-        //{
-        //    // Arrange
-        //    Konto k = new Konto(0);
-        //    int nummer_soll = 1;
-        //    // Act
-        //    int nummer_ist = k.KontoNr;
-        //    //Arrange
-        //    Assert.AreEqual(nummer_soll, nummer_ist);
-        //}
+        [TestMethod]
+        public void KontoNr_KannAbgefragtWerden()
+        {
+            // Arrange
+            Konto k = new Konto(0);
+            int nummer_soll = 4;
+            // Act
+            int nummer_ist = k.KontoNr;
+            //Arrange
+            Assert.AreEqual(nummer_soll, nummer_ist);
+        }
 
         //[TestMethod]
         //public void KontoNr_WirdAutomatischVergeben()
