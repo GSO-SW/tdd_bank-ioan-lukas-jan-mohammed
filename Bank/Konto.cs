@@ -5,8 +5,8 @@ namespace Bank
     public class Konto
     {
         private int guthaben;
-        private static int kontoNr = 0;
-        private int aktuelleKontoNr = 0;
+        private static int aktuelleKontoNr;
+        private int kontoNr;
 
         public int Guthaben
         {
@@ -21,8 +21,8 @@ namespace Bank
             if (guthaben >= 0)
             {
                 this.guthaben = guthaben;
-                kontoNr++;
-                this.aktuelleKontoNr = kontoNr;
+                aktuelleKontoNr++;
+                this.kontoNr = aktuelleKontoNr;
             }
             else
             {
@@ -55,12 +55,5 @@ namespace Bank
             }
         }
 
-        public int AktuelleKontoNr
-        {
-            get
-            {
-                return aktuelleKontoNr;
-            }
-        }
     }
 }
