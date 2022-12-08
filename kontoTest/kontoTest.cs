@@ -73,11 +73,12 @@ namespace BankTest
         {
             // Arrange
             Konto k = new Konto(0);
-            int nummer_soll = 1;
+            
             // Act
             int nummer_ist = k.KontoNr;
+ 
             //Arrange
-            Assert.AreEqual(nummer_soll, nummer_ist);
+            Assert.IsInstanceOfType(nummer_ist,typeof(int));
         }
 
         [TestMethod]
@@ -87,12 +88,12 @@ namespace BankTest
             Konto k1 = new Konto(0);
             Konto k2 = new Konto(0);
             Konto k3 = new Konto(0);
+
             int kontoNummer_soll = k2.KontoNr + 1;
             // Act
             int kontoNummer_ist = k3.KontoNr;
             // Assert
             Assert.AreEqual(kontoNummer_soll, kontoNummer_ist);
         }
-
     }
 }
