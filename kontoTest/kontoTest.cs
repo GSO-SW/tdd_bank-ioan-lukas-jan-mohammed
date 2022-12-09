@@ -3,7 +3,7 @@ using Bank;
 namespace BankTest
 {
     [TestClass]
-    public class BankTest
+    public class KontoTests
     {
         [TestMethod]
         public void Konto_KannMitGuthabenEroeffnetWerden()
